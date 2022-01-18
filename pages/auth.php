@@ -59,7 +59,7 @@ if(mysqli_num_rows($result)>0){
     // $_SESSION['password_user'] = $password_hash;
 }
 else{
-	echo '<h1>Парол ва ё логин хато аст!!!</h1><br>';
+	echo '<h1>Парол ва ё логин хато ворид карда шудааст!!!</h1><br>';
 	echo '<a href="../index.php">Ба қафо</a>';
 }
 
