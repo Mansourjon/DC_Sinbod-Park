@@ -12,7 +12,7 @@ include("header.php");
     <div class="card-body">
       <p class="login-box-msg">Бақайдгирӣ/Регистратция</p>
 
-      <form action="reg.php" method="post">
+      <form  autocomplete="off"  action="reg.php" method="post">
         <div class="input-group mb-3">
           <input name="fullname_user" type="text" class="form-control" placeholder="Ному насаб">
           <div class="input-group-append">
