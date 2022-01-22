@@ -13,7 +13,7 @@ include("header.php");
     </div>
     <div class="card-body">
       <p class="login-box-msg">Воридшавӣ/Авторизиция</p>
-      <form action="pages/auth.php" method="post">
+      <form autocomplete="off" action="pages/auth.php" method="post">
         <div class="input-group mb-3">
           <input type="text" class="form-control" name="login_user" placeholder="Логин">
           <div class="input-group-append">
