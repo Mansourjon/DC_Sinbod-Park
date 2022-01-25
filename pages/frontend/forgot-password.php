@@ -1,17 +1,32 @@
 <?php
 
         $_SESSION['page'] = "Барқароркунии рамз";
-include("header.php");
+
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>| <?php echo $_SESSION['page']; ?></title>
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+  <!-- icheck bootstrap -->
+  <link rel="stylesheet" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+</head>
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="card card-outline card-primary">
     <div class="card-header text-center">
-      <a href="#" class="h1"><b>Ташхиси тиббӣ</b></a>
+      <a href="#" class="h1"><b>Барқароркунӣ</b></a>
     </div>
     <div class="card-body">
       <p class="login-box-msg">Шумо рамзро фаромӯш кардед? Мехоҳед рамзро иваз намоед.</p>  
-      <form action="forgot.php" method="post">
+      <form action="#" method="post">
         <div class="input-group mb-3">
           <input type="email"  name="email_user" class="form-control" placeholder="Email">
           <div class="input-group-append">
@@ -28,7 +43,7 @@ include("header.php");
         </div>
       </form>
       <p class="mt-3 mb-1">
-        <a href="../index.php">Воридшавӣ</a>
+        <a href="../../index.php">Воридшавӣ</a>
       </p>
     </div>
     <!-- /.login-card-body -->

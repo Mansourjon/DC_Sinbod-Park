@@ -1,19 +1,68 @@
 ﻿<?php
-
         $_SESSION['page'] = "Бақайдгирӣ";
-include("header.php");
+
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>| <?php echo $_SESSION['page']; ?></title>
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+  <!-- icheck bootstrap -->
+  <link rel="stylesheet" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+</head>
 <body class="hold-transition register-page">
 <div class="register-box">
   <div class="card card-outline card-primary">
     <div class="card-header text-center">
-      <a href="../index.php" class="h1"><b>Ташхиси тиббӣ</b></a>
+      <a href="#" class="h1"><b>Бақайдгирӣ</b></a>
     </div>
     <div class="card-body">
-      <p class="login-box-msg">Бақайдгирӣ/Регистратция</p>
+      <p class="login-box-msg"></p>
 
-      <form action="reg.php" method="post">
+      <form autocomplete="off" action="../backend/register.php" method="post">
+           
+		   <?php 
+           if(isset($_COOKIE['warning']) || $_COOKIE['warning']!='')
+            
+            {
+        
+        echo '<div class="alert alert-warning alert-dismissible">
+                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                  <h5><i class="icon fas fa-exclamation-triangle"></i> Огоҳӣ!</h5>'
+                  
+          .$_COOKIE['warning'].
+         
+                '</div>';
+        
+ 
+           }
+       if(isset($_COOKIE['danger']) || $_COOKIE['danger']!='')
+            
+            {
+        
+        echo '<div class="alert alert-danger alert-dismissible">
+                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                  <h5><i class="icon fas fa-ban"></i> Огоҳӣ!</h5>'
+                  
+          .$_COOKIE['danger'].
+         
+                '</div>';
+        
+ 
+           }
+        
+       ?>
+		   
         <div class="input-group mb-3">
+       
           <input name="fullname_user" type="text" class="form-control" placeholder="Ному насаб">
           <div class="input-group-append">
             <div class="input-group-text">
@@ -62,7 +111,7 @@ include("header.php");
       </form>
 
 
-      <a href="../index.php" class="text-center">Ман аз қайд гузаштаам!</a>
+      <a href="../../index.php" class="text-center">Ман аз қайд гузаштаам!</a>
     </div>
     <!-- /.form-box -->
   </div><!-- /.card -->
@@ -70,5 +119,5 @@ include("header.php");
 <!-- /.register-box -->
 
 <?php
-include("footer.php")
+include("header/footer.php")
 ?>
